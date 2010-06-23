@@ -103,8 +103,8 @@ The results look similar to this:
    /Developer/Tools/RunPlatformUnitTests.include:399: note: Completed tests for architectures 'i386'
 
 ———————————————————————————————————————————————————————————————————————————————
-Running Application Tests
-To run the application tests:
+Running CalcTesting Application Tests
+
 1. Choose Project > Set Active Target > CalcTesting.
 2. Choose Project > Set Active SDK > iPhone Device 3.0 (or later).
 3. Choose Build > Build and Run. Xcode builds the target, installs
@@ -142,10 +142,17 @@ The application-tests results look similar to this:
    Test Suite 'All tests' finished at 2009-05-19 16:17:18 -0700.
    Executed 7 tests, with 0 failures (0 unexpected) in 0.035 (0.168) seconds
 
+
+SB got
+warning: Couldn't get real path for inserted library /Developer/Platforms/iPhoneOS.platform/DeviceSupport/4.0 (8A293)/Symbols/Developer/Library/PrivateFrameworks/DevToolsBundleInjection.framework/DevToolsBundleInjection
+searched and found
+http://stackoverflow.com/questions/1713280/linker-error-iphone-unit-test-bundle-referencing-app-classes
+
 ———————————————————————————————————————————————————————————————————————————————
 Related Information
 For more information, see the “Unit Testing iPhone Applications” chapter in
 iPhone Development Guide.
 
 Copyright © 2009 Apple Inc. All rights reserved.
+
 
