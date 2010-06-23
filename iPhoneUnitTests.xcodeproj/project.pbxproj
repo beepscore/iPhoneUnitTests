@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -276,7 +276,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iPhoneUnitTests" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
@@ -523,6 +523,7 @@
 				GCC_PREFIX_HEADER = Calc_Prefix.pch;
 				INFOPLIST_FILE = "CalcTesting-Info.plist";
 				PRODUCT_NAME = Calc;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Debug;
 		};
@@ -535,6 +536,7 @@
 				GCC_PREFIX_HEADER = Calc_Prefix.pch;
 				INFOPLIST_FILE = "CalcTesting-Info.plist";
 				PRODUCT_NAME = Calc;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Release;
 		};
@@ -575,7 +577,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = iphonesimulator3.0;
+				SDKROOT = iphonesimulator4.0;
 			};
 			name = Debug;
 		};
@@ -589,7 +591,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = iphonesimulator3.0;
+				SDKROOT = iphonesimulator4.0;
 			};
 			name = Release;
 		};
