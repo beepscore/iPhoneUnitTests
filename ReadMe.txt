@@ -1,70 +1,72 @@
 iPhoneUnitTests
 
-This example illustrates the use of unit tests to ensure that an application’s functionality does not degrade as its source code undergoes changes to improve the application or to fix bugs. The project showcases two types of unit tests: logic and application. Logic unit tests allow for stress-testing source code. Application unit tests help ensure the correct linkage between user-interface controls, controller objects, and model objects.
+This example illustrates the use of unit tests to ensure that an application’s functionality does not degrade as its source code undergoes changes to improve the application or to fix bugs. The project showcases two types of unit tests: logic and application.
+
+    Logic unit tests allow for stress-testing source code.
+    Logic tests are executed as part of the build process to provide
+    you with build errors for failed unit tests.
+    Logic unit-test bundles are not intented to run in iPhone Simulator or a device.
+    A Logic tests target can be built only using the iPhone Simulator SDK.
+    
+    Application unit tests help ensure the correct linkage between user-interface controls, 
+    controller objects, and model objects.
+    Application targets with unit tests can be built and run only using the iPhone Device,
+    they cannot be built or run using the iPhone Simulator. 
 
 Software requirements
 Buildtime: iPhone SDK 3.0 or later.
 Runtime:   iPhone OS 3.0 or later.
-
-
+———————————————————————————————————————————————————————————————————————————————
 The iPhoneUnitTests project contains four targets:
-- Calc.            Builds the Calc application, a simple arithmetic calculator.
-- CalcTesting.     Builds the Calc application and embeds the CalcTests test
-                   suite in it.
-- CalcTests.       Builds the CalcTests test suite.
-- CalculatorTests. Builds the CalculatorTests test suite.
-
-
-Calc Target
+- Calc            Builds the Calc application, a simple arithmetic calculator.
+- CalculatorTests Builds the CalculatorTests test suite.
+- CalcTesting     Builds the Calc application and embeds the CalcTests test suite in it.
+- CalcTests       Builds the CalcTests test suite.
+———————————————————————————————————————————————————————————————————————————————
+Calc Target (app, run in simulator or on device)
 The Calc target builds an iPhone application that implements a simple
 calculator. The calculating engine is implemented in the Calculator class,
 which has two main methods: input: and displayValue.
 
-- input:.       This method accepts a one-character string as input.
+- input:        This method accepts a one-character string as input.
                 This string represents key presses.
-- diaplayValue. This method provides the value representing the calculator’s
+- diaplayValue  This method provides the value representing the calculator’s
                 output: As each key is pressed, the display value changes,
                 as it would on a hardware-based calculator.
-
-
 ———————————————————————————————————————————————————————————————————————————————
-CalculatorTests Target
+CalculatorTests Target (Logic tests, run during build process)
+
 The CalculatorTests target builds a unit-test bundle containing logic tests.
-
-Important: Logic-tests targets can be built only using the iPhone Simulator
-SDK. You cannot build or run CalculatorTests using the iPhone Device SDK.
-
+Important: You cannot build or run CalculatorTests using the iPhone Device SDK.
 ———————————————————————————————————————————————————————————————————————————————
-CalcTests Target
+CalcTesting Target (application + application tests, run on device)
+
+The CalcTesting target has a copy of the Calc target, plus the CalcTests test suite.
+Its builds the Calc application with the CalcTests test suite embedded into it.
+Important: You cannot build or run CalcTesting using the iPhone Simulator SDK.
+———————————————————————————————————————————————————————————————————————————————
+CalcTests Target (application tests, don't build directly)
 The CalcTests target builds a unit-test bundle containing application tests.
 You build as part of the target that builds the application to test. In this
 case, the CalcTesting target.
-
 Important: Application-tests targets cannot be built directly.
-
 ———————————————————————————————————————————————————————————————————————————————
-CalcTesting Target
-The CalcTesting target is a copy of the Calc target. Its purpose is to build
-the Calc application and embed the CalcTests test suite into it.
-
-Important: Application targets with unit tests cannot be built or run using the
-iPhone Simulator SDK; they can be built and run only using the iPhone Device
-SDK. You cannot build or run CalcTesting using the iPhone Simulator SDK.
-
-
 ———————————————————————————————————————————————————————————————————————————————
-Running Logic Tests
-To run the logic tests:
+Running CalculatorTests (Logic tests, run during build process)
+
 1. Choose Project > Set Active Target > CalculatorTests.
 2. Choose Project > Set Active SDK > iPhone Simulator 3.0 (or later).
-3. Choose Build > Build. Xcode runs the test cases implemented in
-   the CalculatorTests.m file.
+3. Choose Build > Build.
+   Xcode runs the test cases implemented in the CalculatorTests.m file.
 4. Choose Build > Build Results to open the Build Results window, containing
    the tests results. You may have to click the Show Transcript button (the
    third button on the bottom-left corner of the build results list) to view
    the build transcript.
+   Alternatively in Build results, set filter to "All Messages",
+   click disclosure triangles to expand list,
+   then click the icon at the end of the line in the right margin.
 
-The logic-tests results look similar to this:
+The results look similar to this:
 
    PhaseScriptExecution <project_directory>/build/iPhoneUnitTests.build/Debug-iphonesimulator/CalculatorTests.build/Script-17AA84010F99894F00167681.sh
        cd <project_directory>
@@ -99,12 +101,6 @@ The logic-tests results look similar to this:
 
    /Developer/Tools/RunPlatformUnitTests.include:388: note: Passed tests for architecture 'i386' (GC OFF)
    /Developer/Tools/RunPlatformUnitTests.include:399: note: Completed tests for architectures 'i386'
-
-
-Remember that logic tests are executed as part of the build process to provide
-you with build errors for failed unit tests. Logic unit-test bundles are not
-intented to run in iPhone Simulator or a device.
-
 
 ———————————————————————————————————————————————————————————————————————————————
 Running Application Tests
@@ -145,7 +141,6 @@ The application-tests results look similar to this:
 
    Test Suite 'All tests' finished at 2009-05-19 16:17:18 -0700.
    Executed 7 tests, with 0 failures (0 unexpected) in 0.035 (0.168) seconds
-
 
 ———————————————————————————————————————————————————————————————————————————————
 Related Information

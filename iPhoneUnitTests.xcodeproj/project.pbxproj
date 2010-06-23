@@ -44,6 +44,13 @@
 			remoteGlobalIDString = 17AA844D0F99902200167681;
 			remoteInfo = ApplicationTests;
 		};
+		DE43AB6311D1DFF80022DAD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17AA84650F9990FC00167681 /* CalcTesting */;
+			remoteInfo = CalcTesting;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -264,6 +271,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				DE43AB6411D1DFF80022DAD6 /* PBXTargetDependency */,
 			);
 			name = Calc;
 			productName = Calc;
@@ -283,9 +291,9 @@
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* Calc */,
+				17AA84020F99894F00167681 /* CalculatorTests */,
 				17AA84650F9990FC00167681 /* CalcTesting */,
 				17AA844D0F99902200167681 /* CalcTests */,
-				17AA84020F99894F00167681 /* CalculatorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -408,6 +416,11 @@
 			isa = PBXTargetDependency;
 			target = 17AA844D0F99902200167681 /* CalcTests */;
 			targetProxy = 17AA84780F9991A800167681 /* PBXContainerItemProxy */;
+		};
+		DE43AB6411D1DFF80022DAD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17AA84650F9990FC00167681 /* CalcTesting */;
+			targetProxy = DE43AB6311D1DFF80022DAD6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
