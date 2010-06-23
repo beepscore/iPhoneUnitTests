@@ -42,7 +42,6 @@ case, the CalcTesting target.
 
 Important: Application-tests targets cannot be built directly.
 
-
 ———————————————————————————————————————————————————————————————————————————————
 CalcTesting Target
 The CalcTesting target is a copy of the Calc target. Its purpose is to build

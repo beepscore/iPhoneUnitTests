@@ -160,7 +160,7 @@
  * 2. Perform corrected computation.
  *  - Press 5, =.
  *  - Ensure the display contains the value 5.
- * 3. Ensure pressign C twice clears all.
+ * 3. Ensure pressing C twice clears all.
  *  - Enter the calculation 19 x 8.
  *  - Press C (clears the display).
  *  - Press C (clears the operand).
